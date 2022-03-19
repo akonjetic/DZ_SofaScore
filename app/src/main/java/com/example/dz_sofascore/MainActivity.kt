@@ -11,17 +11,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        zadaca1()
+
+    }
+
+    private fun zadaca1(){
         val showHideBtn = findViewById<Button>(R.id.showHideButton)
         val helloWorldTextView = findViewById<TextView>(R.id.helloWorldTextView)
 
         showHideBtn.setOnClickListener {
-            if(showHideBtn.text.equals("Show Text")){
+            if(showHideBtn.text.equals(getString(R.string.showText))){
                 helloWorldTextView.isVisible = true
-                showHideBtn.text = "Hide Text"
+                showHideBtn.text = getString(R.string.hideText)
             }
             else{
                 helloWorldTextView.isVisible = false
-                showHideBtn.text = "Show Text"
+                showHideBtn.text = getString(R.string.showText)
             }
         }
     }
