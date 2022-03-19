@@ -1,6 +1,29 @@
 <resources>
     <string name="app_name">DZ_SofaScore</string>
-    <string name="showText">Show Text</string>
-    <string name="hideText">Hide Text</string>
-    <string name="helloWorld">Hello World!</string>
+    <string name="title_activity_main_view_model">MainActivityViewModel</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="button_show">Show Text</string>
+    <string name="button_hide">Hide Text</string>
+    <string name="textView_helloWorld">Hello World!</string>
+    <string name="addNewDriver">Add a New F1 Driver</string>
+    <string name="driverFirstName">First Name</string>
+    <string name="driverLastName">Last Name</string>
+    <string name="driverTeam">Team</string>
+    <string name="driverNationality">Nationality</string>
+    <string name="driverFavTrack">Favorite Track</string>
+    <string name="driverTeammate">Teammate</string>
+    <string name="driverConstructor">Engine</string>
+    <string name="firstNameHint">Michael</string>
+    <string name="lastNameHint">Schumacher</string>
+    <string name="teamHint">Ferrari</string>
+    <string name="nationalityHint">German</string>
+    <string name="favTrackHint">Monte Carlo</string>
+    <string name="teammateHint">Kimi Raikkonen</string>
+    <string name="engineHint">Ferrari</string>
+    <string name="addDriverTab">Add New Driver</string>
+    <string name="myDriversTab">My Drivers</string>
+    <string name="tabbedActivity">F1 Fantasy League</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

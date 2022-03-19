@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         val helloWorldTextView = findViewById<TextView>(R.id.helloWorldTextView)
 
         showHideBtn.setOnClickListener {
-            if(showHideBtn.text.equals(getString(R.string.showText))){
+            if(showHideBtn.text.equals(getString(R.string.button_show))){
                 helloWorldTextView.isVisible = true
-                showHideBtn.text = getString(R.string.hideText)
+                showHideBtn.text = getString(R.string.button_hide)
             }
             else{
                 helloWorldTextView.isVisible = false
-                showHideBtn.text = getString(R.string.showText)
+                showHideBtn.text = getString(R.string.button_show)
             }
         }
     }
