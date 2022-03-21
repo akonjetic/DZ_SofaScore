@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AddNewF1DriverFragment"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="0dp">
+
+    <EditText
+        android:id="@+id/driverFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstNameHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverFirstNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverFirstName"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lastNameHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverLastNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverLastName"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/teamHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverTeamTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverTeam"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nationalityHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverNationalityTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverNationality"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverFavTrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/favTrackHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverFavTrackTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverFavTrack"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverTeammate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/teammateHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverTeammateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverTeammate"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/driverEngine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/engineHint"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/driverEngineTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driverConstructor"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingLeft="5dp"
+        />
+
+    <Button
+        android:id="@+id/addNewDriverButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/addNewDriver"
+        android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>
