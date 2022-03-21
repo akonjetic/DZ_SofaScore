@@ -14,11 +14,6 @@ import com.example.dz_sofascore.model.F1Driver
 
 class AddNewF1DriverFragment : Fragment() {
 
-   /* override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }*/
-
     private val viewModel: MainActivityViewModel by activityViewModels()
 
     override fun onCreateView(
