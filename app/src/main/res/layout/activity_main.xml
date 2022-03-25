@@ -12,13 +12,13 @@
         android:id="@+id/showHideButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Text" />
+        android:text="@string/button_show" />
 
     <TextView
         android:id="@+id/helloWorldTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/textView_helloWorld"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
