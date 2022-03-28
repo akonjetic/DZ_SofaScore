@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // zadaca1()
+         //zadaca1()
 
         zadaca2()
     }
 
-    private fun zadaca1() {
+    /*private fun zadaca1() {
         setContentView(R.layout.activity_main)
 
         val showHideBtn = findViewById<Button>(R.id.showHideButton)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 showHideBtn.text = getString(R.string.button_show)
             }
         }
-    }
+    }*/
 
     private fun zadaca2() {
         setContentView(R.layout.activity_main_view_model)

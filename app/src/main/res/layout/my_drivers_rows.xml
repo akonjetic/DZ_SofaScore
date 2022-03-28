@@ -13,7 +13,7 @@
         android:layout_margin="5dp"
         android:layout_marginTop="5dp"
         android:padding="5dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/ralewayb"
         android:textSize="20sp"
         android:id="@+id/myDrivers_tv"
         android:textColor="@color/purple_200"/>

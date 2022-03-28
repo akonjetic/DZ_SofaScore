@@ -1,155 +1,178 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.AddNewF1DriverFragment"
-    android:orientation="vertical"
-    android:layout_margin="10dp">
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="10dp">
+    android:layout_margin="10dp"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="0dp">
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/driverFirstName"
+    <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/firstNameHint"
-        android:layout_marginTop="10dp"
+        android:id="@+id/editFirstName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:textViewText="@string/driverFirstName"
+        app:editTextHint="@string/firstNameHint"
+        app:dataType="0"/>
+
+    <com.example.dz_sofascore.view.EditTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLastName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editFirstName"
+        app:textViewText="@string/driverLastName"
+        app:editTextHint="@string/lastNameHint"
+        app:dataType="0"
         />
+
+    <com.example.dz_sofascore.view.EditTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editLastName"
+        app:textViewText="@string/driverAge"
+        app:editTextHint="@string/ageHint"
+        app:dataType="1"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderRadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/editAge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editAge"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/M"
+            android:text="@string/genderF"
+            android:id="@+id/F"
+            android:fontFamily="@font/ralewayr"
+            />
+
+        <RadioButton
+            android:id="@+id/M"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewayr"
+            android:text="@string/genderM"
+            app:layout_constraintLeft_toRightOf="@id/F"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editAge" />
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/driverFirstNameTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/driverFirstName"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+        android:text="@string/driverGender"
+        android:id="@+id/driverGenderTV"
+        android:fontFamily="@font/ralewayb"
+        android:layout_marginLeft="5dp"/>
 
-    <EditText
-        android:id="@+id/driverLastName"
+    <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/lastNameHint"
-        android:layout_marginTop="10dp"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/driverGenderTV"
+        android:id="@+id/editTeam"
+        app:editTextHint="@string/teamHint"
+        app:textViewText="@string/driverTeam"
+        app:dataType="0"/>
 
-    <TextView
-        android:id="@+id/driverLastNameTV"
+    <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/driverLastName"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTeam"
+        android:id="@+id/editNationality"
+        app:editTextHint="@string/nationalityHint"
+        app:textViewText="@string/driverNationality"
+        app:dataType="0"/>
 
-    <EditText
-        android:id="@+id/driverTeam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/teamHint"
-        android:layout_marginTop="10dp"
-        />
 
-    <TextView
-        android:id="@+id/driverTeamTV"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/driverTeam"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/editNationality"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/favoriteTrackSpinner"
+        android:layout_marginTop="10dp"/>
 
-    <EditText
-        android:id="@+id/driverNationality"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/nationalityHint"
-        android:layout_marginTop="10dp"
-        />
 
     <TextView
-        android:id="@+id/driverNationalityTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/driverNationality"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
-
-    <EditText
-        android:id="@+id/driverFavTrack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/favTrackHint"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
-        android:id="@+id/driverFavTrackTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favoriteTrackSpinner"
         android:text="@string/driverFavTrack"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
+        android:id="@+id/driverFavoriteTrackTV"
+        android:fontFamily="@font/ralewayb"
+        android:layout_marginLeft="5dp"/>
 
-    <EditText
-        android:id="@+id/driverTeammate"
+    <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/teammateHint"
-        android:layout_marginTop="10dp"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/driverFavoriteTrackTV"
+        app:editTextHint="@string/teammateHint"
+        app:textViewText="@string/driverTeammate"
+        android:id="@+id/editTeammate"
+        app:dataType="0"/>
 
-    <TextView
-        android:id="@+id/driverTeammateTV"
+    <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/driverTeammate"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
-
-    <EditText
-        android:id="@+id/driverEngine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/engineHint"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
-        android:id="@+id/driverEngineTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/driverConstructor"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingLeft="5dp"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTeammate"
+        app:editTextHint="@string/engineHint"
+        app:textViewText="@string/driverConstructor"
+        app:dataType="0"
+        android:id="@+id/editEngine"/>
 
     <Button
         android:id="@+id/addNewDriverButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/addNewDriver"
-        android:textStyle="bold" />
+        app:layout_constraintTop_toBottomOf="@id/editEngine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/ralewayb"
+        android:text="@string/addNewDriver"/>
 
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
-</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

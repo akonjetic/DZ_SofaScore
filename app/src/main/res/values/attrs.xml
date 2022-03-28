@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextView">
+        <attr name="textViewText" format="string"/>
+        <attr name="editTextHint" format="string"/>
+        <attr name="dataType" format="integer"/>
+        <attr name="minLength" format="integer"/>
+        <attr name="errorText" format="string"/>
+    </declare-styleable>
+</resources>

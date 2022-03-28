@@ -9,6 +9,8 @@
     <string name="addNewDriver">Add a New F1 Driver</string>
     <string name="driverFirstName">First Name</string>
     <string name="driverLastName">Last Name</string>
+    <string name="driverAge">Age</string>
+    <string name="driverGender">Gender</string>
     <string name="driverTeam">Team</string>
     <string name="driverNationality">Nationality</string>
     <string name="driverFavTrack">Favorite Track</string>
@@ -16,6 +18,9 @@
     <string name="driverConstructor">Engine</string>
     <string name="firstNameHint">Michael</string>
     <string name="lastNameHint">Schumacher</string>
+    <string name="ageHint">21</string>
+    <string name="genderF">F</string>
+    <string name="genderM">M</string>
     <string name="teamHint">Ferrari</string>
     <string name="nationalityHint">German</string>
     <string name="favTrackHint">Monte Carlo</string>
@@ -23,7 +28,17 @@
     <string name="engineHint">Ferrari</string>
     <string name="addDriverTab">Add New Driver</string>
     <string name="myDriversTab">My Drivers</string>
+    <string name="lengthMessage">Invalid length. 1-20 characters are required.</string>
+    <string name="numberAgeMessage">Invalid age. Must be between 18 and 50 years old.</string>
+    <string name="invalidForm">Invalid form</string>
+    <string name="formSubmitted">Form Submitted</string>
+    <string name="ok">OK.</string>
     <string name="tabbedActivity">F1 Fantasy League</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_bottom_nav">BottomNavActivity</string>
 </resources>
