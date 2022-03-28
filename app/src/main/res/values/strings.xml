@@ -30,9 +30,11 @@
     <string name="myDriversTab">My Drivers</string>
     <string name="lengthMessage">Invalid length. 1-20 characters are required.</string>
     <string name="numberAgeMessage">Invalid age. Must be between 18 and 50 years old.</string>
+    <string name="radioButtonMessage">Invalid gender.</string>
     <string name="invalidForm">Invalid form</string>
     <string name="formSubmitted">Form Submitted</string>
     <string name="ok">OK.</string>
+    <string name="invalidFormText">Please try again.</string>
     <string name="tabbedActivity">F1 Fantasy League</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

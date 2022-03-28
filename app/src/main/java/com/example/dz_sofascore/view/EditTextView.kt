@@ -3,7 +3,6 @@ package com.example.dz_sofascore.view
 import android.content.Context
 import android.text.InputType
 import android.util.AttributeSet
-import android.view.InputDevice
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.FrameLayout
@@ -12,12 +11,12 @@ import com.example.dz_sofascore.databinding.EditTextLayoutBinding
 
 const val STRING = 0
 const val INT = 1
-class EditTextView (context: Context, attr: AttributeSet): FrameLayout(context, attr) {
+class EditTextView(context: Context, attr: AttributeSet) : FrameLayout(context, attr) {
 
     private val binding: EditTextLayoutBinding
     private val dataType: Int
 
-    init{
+    init {
         binding = EditTextLayoutBinding.inflate(LayoutInflater.from(context))
         addView(binding.root)
 
@@ -39,22 +38,18 @@ class EditTextView (context: Context, attr: AttributeSet): FrameLayout(context, 
                         INT -> InputType.TYPE_CLASS_NUMBER
                         else -> InputType.TYPE_TEXT_VARIATION_PERSON_NAME
                     }
-            }finally{
+            } finally {
                 recycle()
             }
         }
     }
 
-    fun getContent(): String{
+    fun getContent(): String {
         return binding.driverFirstName.text.toString()
     }
 
-
-    fun getEditTextContent(): EditText{
+    fun getEditTextContent(): EditText {
         return binding.driverFirstName
     }
 
-    fun clearContent(){
-        binding.driverFirstName.text.clear()
-    }
 }

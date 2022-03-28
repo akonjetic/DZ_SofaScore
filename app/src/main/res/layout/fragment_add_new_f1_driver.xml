@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.AddNewF1DriverFragment"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/background"
     >
 
     <androidx.core.widget.NestedScrollView

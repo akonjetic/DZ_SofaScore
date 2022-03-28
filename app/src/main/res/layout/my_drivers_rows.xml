@@ -14,8 +14,8 @@
         android:layout_marginTop="5dp"
         android:padding="5dp"
         android:fontFamily="@font/ralewayb"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:id="@+id/myDrivers_tv"
-        android:textColor="@color/purple_200"/>
+        android:textColor="@color/black"/>
 
 </LinearLayout>
