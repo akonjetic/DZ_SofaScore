@@ -15,6 +15,9 @@ import com.example.dz_sofascore.MainActivityViewModel
 import com.example.dz_sofascore.R
 import com.example.dz_sofascore.databinding.FragmentAddNewF1DriverBinding
 import com.example.dz_sofascore.enums.RaceTracks
+import com.example.dz_sofascore.helpers.EditTextHelper
+import com.example.dz_sofascore.helpers.FormClearHelper
+import com.example.dz_sofascore.helpers.RadioGroupHelper
 import com.example.dz_sofascore.model.F1Driver
 
 class AddNewF1DriverFragment : Fragment() {
@@ -41,14 +44,21 @@ class AddNewF1DriverFragment : Fragment() {
         listOfElements.add(binding.editAge.getEditTextContent())
 
         val raceTracks = getNames(enumValues<RaceTracks>().toList())
-        val arrayAdapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, raceTracks)
+        val arrayAdapter = ArrayAdapter(
+            requireContext(),
+            androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+            raceTracks
+        )
         binding.favoriteTrackSpinner.adapter = arrayAdapter
 
-        for (editText in listOfElements) {
-            if (editText.inputType != InputType.TYPE_CLASS_NUMBER)
-                FocusAndValidate().editTextFocusListener(editText, requireContext())
-            else
-                FocusAndValidate().numberFocusListener(editText, requireContext())
+        with(EditTextHelper()) {
+            for (editText in listOfElements) {
+                if (editText.inputType != InputType.TYPE_CLASS_NUMBER){
+                    editText.editTextFocusListener(requireContext())
+                }else{
+                    editText.numberFocusListener(requireContext())
+                }
+            }
         }
 
         binding.addNewDriverButton.setOnClickListener {
@@ -56,21 +66,26 @@ class AddNewF1DriverFragment : Fragment() {
             var flag = false
             var isItValid: String?
 
-            for (editText in listOfElements) {
-                isItValid = if (editText.inputType != InputType.TYPE_CLASS_NUMBER) {
-                    FocusAndValidate().validateLength(editText, requireContext())
-                } else {
-                    FocusAndValidate().validateNumber(editText, requireContext())
-                }
+            with(EditTextHelper()) {
+                for (editText in listOfElements) {
 
-                if (isItValid != null) {
-                    flag = true
-                }
+                    isItValid = if (editText.inputType != InputType.TYPE_CLASS_NUMBER) {
+                        editText.validateLength(requireContext())
+                    } else {
+                        editText.validateNumber(requireContext())
+                    }
 
-                isItValid = ""
+                    if (isItValid != null) {
+                        flag = true
+                    }
+
+                    isItValid = ""
+                }
             }
 
-            isItValid = FocusAndValidate().validateRadioGroup(binding.genderRadioGroup, requireContext())
+            with(RadioGroupHelper()) {
+                isItValid = binding.genderRadioGroup.validateRadioGroup(requireContext())
+            }
 
             if (isItValid != null) {
                 flag = true
@@ -89,9 +104,9 @@ class AddNewF1DriverFragment : Fragment() {
 
                 viewModel.f1DriverAdd(f1Driver)
 
-                FormWrapper().clearText(listOfElements)
-                FormWrapper().clearRadioButton(binding.genderRadioGroup)
-                FormWrapper().clearSpinner(binding.favoriteTrackSpinner)
+                FormClearHelper().clearText(listOfElements)
+                FormClearHelper().clearRadioButton(binding.genderRadioGroup)
+                FormClearHelper().clearSpinner(binding.favoriteTrackSpinner)
             } else {
                 val builder = AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.invalidForm))
@@ -118,66 +133,3 @@ class AddNewF1DriverFragment : Fragment() {
     }
 }
 
-class FocusAndValidate {
-    fun editTextFocusListener(editText: EditText, context: Context) {
-        editText.setOnFocusChangeListener { _, focused ->
-            if (!focused) {
-                editText.error = validateLength(editText, context)
-            }
-        }
-    }
-
-    fun validateLength(editText: EditText, context: Context): String? {
-        val validText = editText.text.toString()
-        if (validText.isEmpty() || validText.length > 20) {
-            return context.getString(R.string.lengthMessage)
-        }
-
-        return null
-    }
-
-    fun numberFocusListener(editText: EditText, context: Context) {
-        editText.setOnFocusChangeListener { _, focused ->
-            if (!focused) {
-                editText.error = validateNumber(editText, context)
-            }
-        }
-    }
-
-    fun validateNumber(editText: EditText, context: Context): String? {
-        if (editText.text.toString() != "") {
-            val validNumber = editText.text.toString().toInt()
-            if (validNumber < 18 || validNumber > 50) {
-                return context.getString(R.string.numberAgeMessage)
-            }
-        } else if (editText.text.toString() == "") {
-            return context.getString(R.string.numberAgeMessage)
-        }
-        return null
-    }
-
-    fun validateRadioGroup(radioGroup: RadioGroup, context: Context): String?{
-        if(radioGroup.checkedRadioButtonId == -1){
-            return context.getString(R.string.radioButtonMessage)
-        }
-
-        return null
-    }
-}
-
-class FormWrapper {
-
-    fun clearText(listOfElements: ArrayList<EditText>) {
-        for (element in listOfElements) {
-            element.text.clear()
-        }
-    }
-
-    fun clearRadioButton(radioGroup: RadioGroup) {
-        radioGroup.clearCheck()
-    }
-
-    fun clearSpinner(spinner: Spinner) {
-        spinner.setSelection(0)
-    }
-}
