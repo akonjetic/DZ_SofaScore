@@ -37,5 +37,5 @@ class MyDriversFragment : Fragment() {
         return prikaz
     }
 
-    private fun F1Driver.getInfo() = "$firstName $lastName, $team, $nationality"
+    private fun F1Driver.getInfo() = "$firstName $lastName, $age, $gender, $team, $favoriteTrack"
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_addNewDriver"
+        android:icon="@drawable/ic_racer"
+        android:title="@string/addDriverTab"/>
+
+    <item
+        android:id="@+id/ic_myDrivers"
+        android:icon="@drawable/ic_race_car_icon_8"
+        android:title="@string/myDriversTab"/>
+</menu>
