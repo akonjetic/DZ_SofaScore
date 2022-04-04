@@ -11,5 +11,6 @@ data class F1Driver constructor(
     val nationality: String,
     val favoriteTrack: String,
     val teammate: String,
-    val engineConstructor: String
+    val engineConstructor: String,
+    val imageURL: String?
 ) : Serializable

@@ -42,4 +42,13 @@ class EditTextHelper {
         }
         return null
     }
+
+    fun EditText.validateURLLength(context: Context): String? {
+        val validText = this.text.toString()
+        if (validText.isEmpty() || validText.length > 150) {
+            return context.getString(R.string.lengthURLMessage)
+        }
+
+        return null
+    }
 }

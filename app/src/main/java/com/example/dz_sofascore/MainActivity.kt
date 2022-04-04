@@ -3,11 +3,14 @@ package com.example.dz_sofascore
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.dz_sofascore.databinding.ActivityMainBinding
 import com.example.dz_sofascore.fragment.AddNewF1DriverFragment
 import com.example.dz_sofascore.fragment.MyDriversFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.dz_sofascore.fragment.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         // zadaca2()
 
-        zadaca3()
+        zadaca3_zadaca4()
     }
 
     /*private fun zadaca1() {
@@ -54,20 +57,23 @@ class MainActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
     }
 */
-    private fun zadaca3() {
-        setContentView(R.layout.activity_main)
+    private fun zadaca3_zadaca4() {
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         val addDriversFragment = AddNewF1DriverFragment()
         val myDriversFragment = MyDriversFragment()
+        val settingsFragment = SettingsFragment()
 
         setCurrentFragment(addDriversFragment)
 
-        bottomNavigationView.setOnNavigationItemSelectedListener {
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_addNewDriver -> setCurrentFragment(addDriversFragment)
                 R.id.ic_myDrivers -> setCurrentFragment(myDriversFragment)
+                R.id.ic_settings -> setCurrentFragment(settingsFragment)
             }
             true
         }

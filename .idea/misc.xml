@@ -4,25 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/DZ_SofaScore/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1965" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_driver_image_background.xml" value="0.1" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1965" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_race_car_icon_8.xml" value="0.21" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_racer.xml" value="0.21" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_racing_flags.xml" value="0.2585" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/drawable/ic_racing_icon.xml" value="0.1275" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/activity_bottom_nav.xml" value="0.264" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.264" />
-        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/activity_main.xml" value="0.17592592592592593" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/activity_main_view_model.xml" value="0.2557291666666667" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/bottom_nav_layout.xml" value="0.264" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/chosen_driver_layout.xml" value="0.1" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/edit_text_layout.xml" value="0.1" />
-        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/fragment_add_new_f1_driver.xml" value="0.20955882352941177" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/fragment_add_new_f1_driver.xml" value="0.2" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/fragment_my_drivers.xml" value="0.264" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/fragment_notifications.xml" value="0.259375" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/my_drivers_item_view.xml" value="0.2" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/my_drivers_rows.xml" value="0.1368421052631579" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/menu/bottom_nav.xml" value="0.259375" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
         <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/menu/menu.xml" value="0.264" />
+        <entry key="..\:/FAKS/3. GODINA/SOFASCORE/dz/DZ_SofaScore/app/src/main/res/mipmap-anydpi-v26/ic_driver_image.xml" value="0.179" />
       </map>
     </option>
   </component>

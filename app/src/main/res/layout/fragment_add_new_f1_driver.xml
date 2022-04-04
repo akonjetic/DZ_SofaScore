@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -83,6 +84,17 @@
             app:layout_constraintLeft_toRightOf="@id/F"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/editAge" />
+
+        <RadioButton
+            android:id="@+id/OTHER"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewayr"
+            android:text="@string/genderOTHER"
+            app:layout_constraintLeft_toRightOf="@id/F"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editAge" />
     </RadioGroup>
 
     <TextView
@@ -106,6 +118,17 @@
         app:editTextHint="@string/teamHint"
         app:textViewText="@string/driverTeam"
         app:dataType="0"/>
+
+        <com.example.dz_sofascore.view.EditTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/driverGenderTV"
+            android:id="@+id/imageUrl"
+            app:editTextHint="@string/imageHint"
+            app:textViewText="@string/driverImage"
+            app:dataType="0"/>
 
     <com.example.dz_sofascore.view.EditTextView
         android:layout_width="match_parent"
