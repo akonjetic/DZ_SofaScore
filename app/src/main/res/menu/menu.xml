@@ -9,4 +9,9 @@
         android:id="@+id/ic_myDrivers"
         android:icon="@drawable/ic_race_car_icon_8"
         android:title="@string/myDriversTab"/>
+
+    <item
+        android:id="@+id/ic_settings"
+        android:icon="@drawable/ic_racing_flags"
+        android:title="@string/settingsTab"/>
 </menu>

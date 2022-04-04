@@ -51,5 +51,4 @@ class EditTextView(context: Context, attr: AttributeSet) : FrameLayout(context, 
     fun getEditTextContent(): EditText {
         return binding.driverFirstName
     }
-
 }

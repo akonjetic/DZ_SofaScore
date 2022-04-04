@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">DZ_SofaScore</string>
-    <string name="title_activity_main_view_model">MainActivityViewModel</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name" translatable="false">DZ_SofaScore</string>
+    <string name="title_activity_main_view_model" translatable="false">MainActivityViewModel</string>
+    <string name="tab_text_1" translatable="false">Tab 1</string>
+    <string name="tab_text_2" translatable="false">Tab 2</string>
+    <string name="appBarTitle" translatable="false">F1 Fantasy</string>
     <string name="button_show">Show Text</string>
     <string name="button_hide">Hide Text</string>
     <string name="textView_helloWorld">Hello World!</string>
@@ -16,31 +17,41 @@
     <string name="driverFavTrack">Favorite Track</string>
     <string name="driverTeammate">Teammate</string>
     <string name="driverConstructor">Engine</string>
-    <string name="firstNameHint">Michael</string>
-    <string name="lastNameHint">Schumacher</string>
-    <string name="ageHint">21</string>
-    <string name="genderF">F</string>
-    <string name="genderM">M</string>
-    <string name="teamHint">Ferrari</string>
+    <string name="driverImage">Photo URL</string>
+    <string name="firstNameHint" translatable="false">Michael</string>
+    <string name="lastNameHint" translatable="false">Schumacher</string>
+    <string name="ageHint" translatable="false">21</string>
+    <string name="genderF" translatable="false">F</string>
+    <string name="genderM" translatable="false">M</string>
+    <string name="genderOTHER">OTHER</string>
+    <string name="teamHint" translatable="false">Ferrari</string>
     <string name="nationalityHint">German</string>
-    <string name="favTrackHint">Monte Carlo</string>
-    <string name="teammateHint">Kimi Raikkonen</string>
-    <string name="engineHint">Ferrari</string>
+    <string name="favTrackHint" translatable="false">Monte Carlo</string>
+    <string name="teammateHint" translatable="false">Kimi Raikkonen</string>
+    <string name="engineHint" translatable="false">Ferrari</string>
+    <string name="imageHint" translatable="false">https://www.theplace2.ru/archive/michael_schumacher/img/5-33.jpg</string>
     <string name="addDriverTab">Add New Driver</string>
     <string name="myDriversTab">My Drivers</string>
+    <string name="settingsTab">Settings</string>
     <string name="lengthMessage">Invalid length. 1-20 characters are required.</string>
+    <string name="lengthURLMessage">Invalid length. 1-150 characters are required.</string>
     <string name="numberAgeMessage">Invalid age. Must be between 18 and 50 years old.</string>
     <string name="radioButtonMessage">Invalid gender.</string>
     <string name="invalidForm">Invalid form</string>
     <string name="formSubmitted">Form Submitted</string>
-    <string name="ok">OK.</string>
+    <string name="ok" translatable="false">OK.</string>
     <string name="invalidFormText">Please try again.</string>
-    <string name="tabbedActivity">F1 Fantasy League</string>
+    <string name="tabbedActivity" translatable="false">F1 Fantasy League</string>
+    <string name="submittedForm">The form has been successfully submitted!</string>
+    <string name="chosenDriver"> has been chosen.</string>
+    <string name="chooseLanguage">Choose Your Language</string>
+    <string name="engLang" translatable="false">English</string>
+    <string name="hrvLang" translatable="false">Hrvatski</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_bottom_nav">BottomNavActivity</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_bottom_navigation" translatable="false">BottomNavigationActivity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="title_activity_bottom_nav" translatable="false">BottomNavActivity</string>
 </resources>

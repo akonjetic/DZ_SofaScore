@@ -1,40 +1,45 @@
 package com.example.dz_sofascore.fragment
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dz_sofascore.MainActivityViewModel
 import com.example.dz_sofascore.R
+import com.example.dz_sofascore.adapter.MyDriversAdapter
+import com.example.dz_sofascore.databinding.FragmentMyDriversBinding
+import com.example.dz_sofascore.helpers.StatusBarHelper
 import com.example.dz_sofascore.model.F1Driver
 
 class MyDriversFragment : Fragment() {
 
     private val viewModel: MainActivityViewModel by activityViewModels()
+    private var _binding: FragmentMyDriversBinding? = null
+    private val binding get() = _binding!!
 
+    @SuppressLint("ResourceType")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val prikaz = inflater.inflate(R.layout.fragment_my_drivers, container, false)
-
-        val linLayout = prikaz.findViewById<LinearLayout>(R.id.myDrivers_linearLayout)
-        viewModel.listOfDrivers.observe(viewLifecycleOwner) {
-            linLayout.removeAllViews()
-
-            for (f1Driver in it) {
-                val row = inflater.inflate(R.layout.my_drivers_rows, linLayout, false)
-                val driverInfo = row.findViewById<TextView>(R.id.myDrivers_tv)
-                driverInfo.text = f1Driver.getInfo()
-                linLayout.addView(row)
-            }
+        with(StatusBarHelper()) {
+            activity?.setStatusBarColor(Color.parseColor(getString(R.color.teal_200)))
         }
-        return prikaz
+
+        _binding = FragmentMyDriversBinding.inflate(inflater, container, false)
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        viewModel.listOfDrivers.observe(viewLifecycleOwner) {
+            val adapter = MyDriversAdapter(requireContext(), it)
+            binding.recyclerView.adapter = adapter
+        }
+        return binding.root
     }
 
     private fun F1Driver.getInfo() = "$firstName $lastName, $age, $gender, $team, $favoriteTrack"

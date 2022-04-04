@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_show">Prikaži tekst</string>
+    <string name="button_hide">Sakrij tekst</string>
+    <string name="textView_helloWorld">Pozdrav svijete!</string>
+    <string name="addNewDriver">Dodaj novog F1 vozača</string>
+    <string name="driverFirstName">Ime</string>
+    <string name="driverLastName">Prezime</string>
+    <string name="driverAge">Starost</string>
+    <string name="driverGender">Spol</string>
+    <string name="driverTeam">Momčad</string>
+    <string name="driverNationality">Nacionalnost</string>
+    <string name="driverFavTrack">Najdraža staza</string>
+    <string name="driverTeammate">Timski kolega</string>
+    <string name="driverConstructor">Motor</string>
+    <string name="driverImage">Link na fotografiju</string>
+    <string name="genderOTHER">DRUGO</string>
+    <string name="nationalityHint">Nijemac</string>
+    <string name="addDriverTab">Dodaj novog vozača</string>
+    <string name="myDriversTab">Moji vozači</string>
+    <string name="lengthMessage">Neispravna duljina. Potrebno je minimalno 1-20 znakova.</string>
+    <string name="lengthURLMessage">Neispravna duljina. Potrebno je minimalno 1-150 znakova.</string>
+    <string name="numberAgeMessage">Nesipravna starost. Mora biti između 18 i 50 godina starosti.</string>
+    <string name="radioButtonMessage">Neispravan spol.</string>
+    <string name="invalidForm">Nesipravna forma.</string>
+    <string name="formSubmitted">Forma je predana.</string>
+    <string name="invalidFormText">Molimo pokušajte ponovno.</string>
+    <string name="submittedForm">Forma je uspješno predana.</string>
+    <string name="chosenDriver">je odabran/a.</string>
+    <string name="chooseLanguage">Odaberite Svoj Jezik</string>
+    <string name="settingsTab">Postavke</string>
+</resources>
